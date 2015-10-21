@@ -1,0 +1,99 @@
+input[data-type=date] {
+  width:500px;
+}
+div#tmg_datepicker {
+  position:absolute;
+  background:#FFF;
+  padding:10px;
+  box-shadow: 0 0 17px 0 rgba(0,0,0,.4);
+  font-family: helvetica;
+  font-size: 12px;
+}
+div#tmg_datepicker,
+div#tmg_datepicker div.dp_arrow {
+  transition: top .2s ease-in-out, left .2s ease-in-out;
+}
+div#tmg_datepicker div.dp_arrow{
+  position: absolute;
+  border-width: 11px 9px;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  border-color: transparent white transparent transparent;
+}
+div#tmg_datepicker div.dp_wrapper {
+  overflow: hidden;
+  width: 218px;
+}
+div#tmg_datepicker table {
+  border-collapse:collapse;
+}
+div#tmg_datepicker tbody {
+  background: #FAFAFA;
+  height: 218px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: block;
+  cursor:pointer;
+}
+div#tmg_datepicker thead {
+  background: #F0F0F0;
+  display: table;
+}
+div#tmg_datepicker tbody td,
+div#tmg_datepicker thead th {
+  height: 30px;
+  width: 30px;
+  color: #35353C;
+  text-align: center;
+  padding: 0;
+  border-style: solid;
+  border-color: #DADADA;
+}
+div#tmg_datepicker thead .month-title th {
+  border-width: 1px 1px 0 1px;
+  border-color: #E2E2E2;
+}
+div#tmg_datepicker thead .day-titles th {
+  border-width: 0 1px 1px 1px;
+}
+div#tmg_datepicker span.month-label {
+  display: block;
+  font-size: 6px;
+  color: white;
+  background: black;
+  padding: 6px 0;
+  text-align: center;
+  float: left;
+  line-height: 6px;
+  width: 25%;
+}
+div#tmg_datepicker span.day-label {
+  line-height: 30px;
+  display: block;
+  height: inherit;
+  width: inherit;
+}
+div#tmg_datepicker span.month-label + span.day-label {
+  float: right;
+  width:75%;
+}
+div#tmg_datepicker tbody td {
+  border: 1px solid #E7E5E5;
+  transition: background-color .2s ease-in-out;
+}
+div#tmg_datepicker tbody td:hover {
+  background:#D1BDD8;
+}
+div#tmg_datepicker tbody td.selected {
+  background:#421E4E;
+  color:#FFF;
+}
+div#tmg_datepicker tbody td.disabled {
+  color: #BBB;
+  transition: none;
+  cursor: default;
+}
+div#tmg_datepicker tbody td.disabled:hover {
+  background:inherit;
+}
